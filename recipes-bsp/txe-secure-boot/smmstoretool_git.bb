@@ -19,6 +19,7 @@ inherit pkgconfig
 
 S = "${WORKDIR}/git/util/smmstoretool"
 
+INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 EXTRA_OEMAKE = ' \
                DESTDIR="${D}" \
                PREFIX="${prefix}" \
