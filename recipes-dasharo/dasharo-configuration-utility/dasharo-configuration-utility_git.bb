@@ -22,6 +22,7 @@ RDEPENDS:${PN} = " \
     imagemagick\
     util-linux\
 "
+RPROVIDES:${PN} += "dcu"
 
 do_install () {
     install -d ${D}/${sbindir}
