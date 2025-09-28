@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/BSD-3-Clause;m
 SRC_URI = "https://github.com/9elements/${BPN}/releases/download/v${PV}/artifacts-amd64.zip"
 SRC_URI[sha256sum] = "58362a5976e68c31e20ecd34338683826c920bb2f34c717dd693aecbb1f7db3d"
 
-S = "${WORKDIR}"
+S = "${UNPACKDIR}"
 
 do_install() {
     install -d ${D}${bindir}
