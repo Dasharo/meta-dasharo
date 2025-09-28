@@ -9,7 +9,6 @@ SRC_URI = "\
     git://github.com/fwupd/fwupd-efi;protocol=https;branch=main \
     file://cc.patch"
 SRCREV = "8de5918507dcc797e612aac688d6b60b90053f54"
-S = "${WORKDIR}/git"
 
 COMPATIBLE_HOST = "(x86_64.*|i.86.*|aarch64.*|arm.*)-linux"
 
