@@ -7,8 +7,8 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=5b4473596678d62d9d83096273422c8c"
 DEPENDS += "python3-setuptools-scm-native"
 
 PV = "3.0+git${SRCPV}"
-SRC_URI = "git://github.com/PSPReverse/PSPTool.git;protocol=https;branch=master"
-SRCREV = "f46cb18dc56f38cb9381de8050371899b4915e0c"
+SRC_URI = "git://github.com/3mdeb/PSPTool.git;protocol=https;branch=master"
+SRCREV = "4c517a81e83b045bf15e30ad2bf6c1c4173529af"
 
 S = "${WORKDIR}/git"
 
