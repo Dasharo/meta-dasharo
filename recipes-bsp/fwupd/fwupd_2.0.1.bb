@@ -9,8 +9,6 @@ SRC_URI = "git://git@github.com/Dasharo/fwupd;protocol=https;branch=dasharo-rele
 
 SRCREV = "1ad6f5156dae1d54963bd3999a89a86567216af2"
 
-S = "${WORKDIR}/git"
-
 inherit meson vala gobject-introspection systemd bash-completion pkgconfig gi-docgen ptest manpages
 
 GIDOCGEN_MESON_OPTION = 'docs'

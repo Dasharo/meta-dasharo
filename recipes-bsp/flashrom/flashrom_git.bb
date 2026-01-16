@@ -12,6 +12,4 @@ BRANCH = "dasharo-release"
 SRC_URI = "git://github.com/Dasharo/flashrom.git;branch=${BRANCH};protocol=https"
 SRCREV = "c855bc077ba7e9be54a8dd95ba41fb1a2211366d"
 
-S = "${WORKDIR}/git"
-
 inherit meson pkgconfig

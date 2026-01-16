@@ -3,21 +3,21 @@ HOMEPAGE = "https://github.com/coreboot/coreboot"
 
 LICENSE = "GPL-2.0-or-later"
 LIC_FILES_CHKSUM = "\
-    file://${WORKDIR}/git/LICENSES/GPL-2.0-or-later.txt;md5=261bea1168c0bdfa73232ee90df11eb6\
+    file://${UNPACKDIR}/${BP}/LICENSES/GPL-2.0-or-later.txt;md5=261bea1168c0bdfa73232ee90df11eb6\
 "
 
 PV = "1.0+git${SRCPV}"
 
 SRC_URI = " \
     git://github.com/coreboot/coreboot.git;branch=main;protocol=https\
-    file://a5df001.diff;patchdir=${WORKDIR}/git\
+    file://a5df001.diff;patchdir=${UNPACKDIR}/${BP}\
 "
 
 SRCREV = "602653abed391ae1b1445ad86d0f05b8b5b678cb"
 
 inherit pkgconfig
 
-S = "${WORKDIR}/git/util/smmstoretool"
+S = "${UNPACKDIR}/${BP}/util/smmstoretool"
 
 INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 EXTRA_OEMAKE = ' \
