@@ -8,7 +8,7 @@ DEPENDS += "python3-setuptools-scm-native"
 
 PV = "3.0+git${SRCPV}"
 SRC_URI = "git://github.com/PSPReverse/PSPTool.git;protocol=https;branch=master"
-SRCREV = "c228c009fa3f86c06bf0f173a8193aa2d2db4d57"
+SRCREV = "9feb0300825e7a94123a6ceee3a5d43c26fdb19f"
 
 S = "${WORKDIR}/git"
 
