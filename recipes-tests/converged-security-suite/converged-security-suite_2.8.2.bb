@@ -4,20 +4,15 @@ SECTION = "devel"
 LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://${COREBASE}/meta/files/common-licenses/BSD-3-Clause;md5=550794465ba0ec5312d6919e203a55f9"
 
-SRC_URI = "https://github.com/9elements/${BPN}/releases/download/v${PV}/artifacts-amd64.zip"
-SRC_URI[sha256sum] = "58362a5976e68c31e20ecd34338683826c920bb2f34c717dd693aecbb1f7db3d"
+GO_IMPORT = "github.com/9elements/${BPN}"
+GO_EXTRA_LDFLAGS:append = " -X main.gitcommit=${SRCREV} -X main.gittag=${PV}"
 
-S = "${UNPACKDIR}"
+inherit go-mod
 
-do_install() {
-    install -d ${D}${bindir}
-    install -m 0755 ${S}/amd-suite ${D}${bindir}
-    install -m 0755 ${S}/bg-prov ${D}${bindir}
-    install -m 0755 ${S}/bg-suite ${D}${bindir}
-    install -m 0755 ${S}/pcr0tool ${D}${bindir}
-    install -m 0755 ${S}/txt-prov ${D}${bindir}
-    install -m 0755 ${S}/txt-suite ${D}${bindir}
-}
+SRC_URI = " \
+    git://${GO_IMPORT}.git;protocol=https;branch=main;destsuffix=${GO_SRCURI_DESTSUFFIX} \
+"
+SRCREV = "ba64392f925cee348bee70173b1286710e255fe2"
 
 PACKAGES =+ "${PN}-amd ${PN}-bg ${PN}-txt ${PN}-tools"
 
