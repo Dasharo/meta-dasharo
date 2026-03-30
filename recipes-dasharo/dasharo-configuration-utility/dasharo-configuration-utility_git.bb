@@ -14,8 +14,6 @@ SRC_URI = "\
 
 SRCREV = "6817e69d8eab55bc72725a3be4a8627b8d71c31b"
 
-S = "${WORKDIR}/git"
-
 RDEPENDS:${PN} = " \
     bash \
     cbfstool \
